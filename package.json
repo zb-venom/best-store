@@ -1,0 +1,28 @@
+{
+  "name": "best-store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index",
+    "strat": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zb-venom/best-store.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zb-venom/best-store/issues"
+  },
+  "homepage": "https://github.com/zb-venom/best-store#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "mongoose": "^5.9.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
