@@ -5,7 +5,7 @@ config.server = {
 }
 
 config.db = {
-    key: 'mongodb+srv://admin:MVPmu8Mku9WfKreG@cluster0-geu5y.mongodb.net/best-store',
+    key: '',
 }
 
 module.exports = config;
