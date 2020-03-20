@@ -1,5 +1,9 @@
-exports.main = async (req, res) =>  {
+exports.getMain = async (req, res) =>  {
     res.render('index', {
-        title: 'Best Store',
+        title: 'BestStore',
     })
+}
+
+exports.postMain = async (req, res) => {
+    
 }

@@ -3,7 +3,7 @@ const router = Router()
 
 var appController = require('../controllers/appController');
 
-router.route('/').get(appController.main);
+router.route('/').get(appController.getMain).post(appController.postMain);
 
 
 module.exports = router;
