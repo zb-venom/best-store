@@ -23,6 +23,21 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(appRoutes)
 app.use(cookieParser('secret key'))
 
-app.listen(config.server.port, () => {
-    console.log('\nСервер запущен...\nПриложение доступно по ссылке http://localhost:77\n'.green)
-})
+async function start() {
+    try { 
+        await mongoose.connect(config.db.key, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            useFindAndModify: false
+        })
+        app.listen(config.server.port, () => {
+            console.log('\nСервер запущен...\nПриложение доступно по ссылке http://localhost:777\n'.green)
+        })
+    }
+    catch (e) {
+        console.log(e);        
+    }
+}
+console.log('\nЗапуск сервера...\nОжидайте.\n'.red);
+
+start()
