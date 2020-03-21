@@ -25,12 +25,27 @@ a:hover, a:focus {
     grid-template-columns: repeat(24, 1fr);
 }
 
+.actions {
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    grid-column: span 24;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+h6 {
+    margin: 0;
+    color: rgb(98, 98, 98);
+}
+
 .header {
     z-index: 1;
     max-height: 100px;
     text-align: center;
     background-color: rgb(248, 248, 248);
-    box-shadow: 0 0 10px rgba(105, 105, 105, 0.465);
+    box-shadow: 0 .2rem 7px rgba(105, 105, 105, 0.465);
     grid-column: span 24;
     padding-bottom: 0.5rem;
 }
@@ -185,8 +200,20 @@ a:hover, a:focus {
     grid-column: span 24;
 }
 
+.hide {
+    display: inherit;
+}
+
 @media screen and (max-width: 800px) {
     
+    .actions {
+        justify-content: center;
+    }
+
+    .hide {
+        display: none;
+    }
+
     .head-brand {
         grid-column: span 24;
     }
