@@ -141,19 +141,19 @@ a:hover, a:focus {
     margin-bottom: 2rem;
     padding: 1rem;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .store-text {
     margin: .5rem;
     text-align: left;
-    grid-column: span 5;
+    grid-column: span 4;
 }
 
 .store-item {
     grid-column: span 1;
     background-color: rgb(255, 196, 196);
-    margin: .5rem;
+    margin: .5rem auto;
     height: 200px;
     width: 200px;
 }
@@ -218,20 +218,15 @@ a:hover, a:focus {
 
     .store-content {
         padding: .5rem;
-        grid-column: span 22;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .store-text {
-        grid-column: span 3;
+        grid-column: span 2;
     }
 
     .store-item {
         grid-column: span 1;
-    }
-
-    .store-options {
-        grid-column: span 2;
     }
 }
 @media screen and (max-width: 480px) {
@@ -264,7 +259,11 @@ a:hover, a:focus {
     }
 
     .store-item {
-        grid-column: span 3;
+        grid-column: span 2;
+    }
+
+    .store-options {
+        grid-column: span 24;
     }
 
     .main-content {
