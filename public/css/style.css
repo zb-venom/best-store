@@ -204,6 +204,21 @@ h6 {
     display: inherit;
 }
 
+@media screen and (max-width: 1000px) {
+    .store-content {
+        padding: .5rem;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .store-text {
+        grid-column: span 3;
+    }
+
+    .store-item {
+        grid-column: span 1;
+    }
+}
+
 @media screen and (max-width: 800px) {
     
     .actions {
