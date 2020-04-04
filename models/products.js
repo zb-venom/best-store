@@ -5,6 +5,7 @@ const productsSchema = new Schema({
     count: Number, 
     coll: Number,
     category: Number,
+    about: String,
     price: Number,
     imgUrl: String,
 });

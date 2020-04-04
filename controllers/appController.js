@@ -8,9 +8,13 @@ router.use(cookieParser('secret key'))
 const productsSchema = require('../models/products');
 
 
-exports.getMain = async (req, res) =>  {
+exports.getMain = async (req, res) =>  {    
+    var products = await productsSchema.find().lean();
+    var sliderProducts = await productsSchema.find().limit(10).lean();
     res.render('index', {
         title: 'BestStore',
+        products,
+        sliderProducts
     })
 }
 
@@ -20,15 +24,19 @@ exports.postMain = async (req, res) => {
 
 exports.getCategory = async (req, res) =>  {
     var products = await productsSchema.find().lean();
-    var sliderProducts = await productsSchema.find().limit(5).lean();
+    var sliderProducts = await productsSchema.find().limit(10).lean();
     if (req.params.category == 'male'){
         category = "Мужская одежда";
         var products = await productsSchema.find({category: 1}).lean();
-        var sliderProducts = await productsSchema.find({category: 1}).limit(5).lean();
+        var sliderProducts = await productsSchema.find({category: 1}).limit(10).lean();
     } else if (req.params.category == 'female'){
         category = "Женская одежда";
         var products = await productsSchema.find({category: 2}).lean();
-        var sliderProducts = await productsSchema.find({category: 1}).limit(5).lean();
+        var sliderProducts = await productsSchema.find({category: 2}).limit(10).lean();
+    } else if (req.params.category == 'child'){
+        category = "Детская одежда";
+        var products = await productsSchema.find({category: 3}).lean();
+        var sliderProducts = await productsSchema.find({category: 3}).limit(10).lean();
     }
     res.render('products', {
         title: 'BestStore | ' + category,
