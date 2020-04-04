@@ -182,7 +182,6 @@ h6 {
     background-color: rgb(255, 196, 196);
     margin: .5rem auto;
     height: 200px;
-    width: 200px;
 }
 
 .store-options {
@@ -206,7 +205,7 @@ h6 {
     left: -50px;
 }
 
-.slider-item img { 
+.slider-item img, .store-item img { 
     border-radius: .2rem;
     height: 200px;
     margin: auto;
