@@ -1,10 +1,8 @@
 <div class="main-content">
     <div class="slider" id="slider">
-        <div class="slider-item"><img src="https://i.ibb.co/YL9BgC3/26866-group-1.jpg" alt="26866-group-1" border="0"></div>
-        <div class="slider-item"><img src="https://i.ibb.co/R7qv7fx/14509384-1-blue.jpg" alt="14509384-1-blue" border="0"></div>
-        <div class="slider-item">3</div>
-        <div class="slider-item">4</div>
-        <div class="slider-item">5</div>
+        {{#each sliderProducts}}            
+            <div class="slider-item"><a href="/product/{{_id}}"><img src="{{imgUrl}}" alt="{{productName}}"></a></div>
+        {{/each}}
     </div>
 </div>  
 <div class="store-options">
@@ -20,16 +18,9 @@
 </div>
 <div class="store-content">
     <div class="store-text">Товары: 6654</div>
-    <div class="store-item"></div>
-    <div class="store-item"></div>
-    <div class="store-item"></div>
-    <div class="store-item"></div>
-    <div class="store-item"></div>
-    <div class="store-item"></div>
-    <div class="store-item"></div>
-    <div class="store-item"></div>
-    <div class="store-item"></div>
-    <div class="store-item"></div>
+    {{#each products}}
+        <div class="store-item"><a href="/product/{{_id}}"><img src="{{imgUrl}}" alt="{{productName}}"></a></div>
+    {{/each}}
 </div>
 
 <script>

@@ -9,7 +9,7 @@ const productsSchema = require('../models/products');
 
 
 exports.getPanel = async (req, res) =>  {
-    const products = await productsSchema.find({}).lean()
+    const products = await productsSchema.find().lean()
     
     if (req.params.key == '50454e4953') {        
         res.render('adminPanel', {
@@ -21,10 +21,10 @@ exports.getPanel = async (req, res) =>  {
 }
 
 exports.addProduct = async (req, res) =>  {
-    console.log(req.body.productName)
     const new_product = new productsSchema({
         productName: req.body.productName,
         count: req.body.count, 
+        category: req.body.category, 
         coll: req.body.coll,
         price: req.body.price,
         imgUrl: req.body.imgUrl
