@@ -1,11 +1,16 @@
 {{> head }}
 <body>
    <div class="container">
-      {{> actions}}
-      {{> header}}
-      {{> navbar}}
-      {{{ body }}}
-      {{> footer}}
+      {{#if admin}}
+         {{> actions}} 
+         {{{ body }}}
+      {{else}}     
+         {{> actions}}
+         {{> header}} 
+         {{> navbar}}
+         {{{ body }}}
+         {{> footer}}
+      {{/if}}
    </div>
 </body>
 </html>

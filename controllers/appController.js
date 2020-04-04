@@ -13,7 +13,8 @@ exports.getCategory = async (req, res) =>  {
         category = "Мужская одежда"
     res.render('products', {
         title: 'BestStore',
-        category: category
+        category: category,
+        products: products
     })
 }
 

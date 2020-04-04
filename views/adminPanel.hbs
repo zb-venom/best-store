@@ -1,0 +1,13 @@
+<select size="5" class="admin-select" id="product">
+    <option disabled>Выберите продукт</option>
+    <option value="Чебурашка">Чебурашка</option>
+    <option selected value="Крокодил Гена">Крокодил Гена</option>
+    <option value="Шапокляк">Шапокляк</option>
+    <option value="Крыса Лариса">Крыса Лариса</option>
+</select>
+
+<script>
+    $('#product').click(function() {
+        console.log($("#product").val());
+    })
+</script>

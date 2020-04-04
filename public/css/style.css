@@ -180,8 +180,11 @@ h6 {
 .store-item {
     grid-column: span 1;
     background-color: rgb(255, 196, 196);
+    box-shadow: 0 .2rem 7px rgba(105, 105, 105, 0.465);
+    text-align: center;
     margin: .5rem auto;
     height: 200px;
+    border-radius: 10px;
 }
 
 .store-options {
@@ -192,7 +195,6 @@ h6 {
 
 .slider-item {
     background-color: rgba(141, 141, 141, 0.123);
-    background: radial-gradient(circle, rgba(54,54,54,1) 0%, rgba(172,172,172,1) 100%);
     box-shadow: 0 .2rem 7px rgba(105, 105, 105, 0.465);
     text-align: center;
     margin: .5rem;
@@ -247,6 +249,10 @@ h6 {
 
 .city:hover .about-city {
     display: inline;
+}
+
+.admin-select {
+    width: 250px;
 }
 
 @media screen and (max-width: 1000px) {
