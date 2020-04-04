@@ -1,8 +1,14 @@
+
+
+<div class="product-content">
 {{#each product}}
-    <h1>{{productName}}</h1>
-    <img src="{{imgUrl}}" alt="{{productName}}" height="200px">
-    <h4>Категория: {{category}}</h4>
-    <h4>Коллекция: {{coll}}</h4>
-    <h4>Количество: {{count}}</h4>
-    <h3>Цена: {{price}}</h3>
+    <h1 class="product-name">{{productName}}</h1>
+    <img src="{{imgUrl}}" alt="{{productName}}" width="100%" class="product-img">
+    <div class="product-about">
+        <h3>Категория: {{categoryStr}}</h3>
+        <h3>Коллекция: {{collStr}}</h3>
+        <h3>Количество: {{count}}</h3>
+        <h2>Цена: {{price}}<span class="rub">₽</span></h2> 
+    </div>
 {{/each}}
+</div>

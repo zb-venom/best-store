@@ -44,6 +44,13 @@ exports.getCategory = async (req, res) =>  {
 
 exports.getProduct = async (req, res) => {
     var product = await productsSchema.find({_id: req.params._id}).lean();
+    if (product[0].category == 1) product[0].categoryStr = "Мужская одежда";
+    else if (product[0].category == 2) product[0].categoryStr = "Женская одежда";
+    else if (product[0].category == 3) product[0].categoryStr = "Детская одежда";    
+    if (product[0].coll == 1) product[0].collStr = "Зимняя";
+    else if (product[0].coll == 2) product[0].collStr = "Летняя";
+    else if (product[0].coll == 3) product[0].collStr = "Демисезон";
+    console.log(product)
     res.render('product', {
         title: 'BestStore | ' + product[0].productName,
         product

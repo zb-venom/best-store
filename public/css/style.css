@@ -255,6 +255,41 @@ h6 {
     width: 250px;
 }
 
+.product-content {
+    grid-column: span 20;
+    margin-top: .5rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.product-name {
+    grid-column: span 2;
+    margin-bottom: .5rem;
+}
+
+.product-img {
+    grid-column: span 1;
+    box-shadow: 0 0 10px rgba(105, 105, 105, 0.465);
+    border-radius: .2rem;
+}
+
+.product-about {
+    margin-left: 1rem;
+    grid-column: span 1;
+}
+
+.rub {
+    font-weight: normal;
+    font-size: 1.2rem;
+    margin-left: .2rem;
+}
+
+h5, h4, h3, h2, h1 {
+    margin: 0;
+}
+
 @media screen and (max-width: 1000px) {
     .store-content {
         padding: .5rem;
