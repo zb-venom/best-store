@@ -1,7 +1,7 @@
 <div class="actions">
-    <h6 class="hide">Место положения: <u>Томск</u></h6>
+    <h6 class="hide">Место положения:&ensp;<u id="city" class="city"></u></h6>
     <h6 class="hide">Дата/Время:<span id="time"></span></h6>
-    <h6>Войти</h6>
+    <a href="/auth"><h6 class="link">Войти</h6></a>
 </div>
 
 <script>
@@ -30,4 +30,10 @@ function date_time() {
 setInterval(function () {    
     $('#time').html(date_time());
 }, 1000);
+
+
+ $.get("https://ipinfo.io/json?token=e9ba79c9ffe771", function( data ) {
+  $("#city").html(data.city+'<span class="about-city">Город был определен на основе вашего IP (<u id="ip"></u>) адресса.</span>');
+  $("#ip").html(data.ip);
+});
 </script>

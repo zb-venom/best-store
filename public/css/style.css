@@ -31,13 +31,25 @@ a:hover, a:focus {
     justify-content: space-between;
     background-color: transparent;
     grid-column: span 24;
+    padding-top: .2rem;
     padding-left: 3rem;
     padding-right: 3rem;
 }
 
+
 h6 {
     margin: 0;
+    font-weight: normal;
     color: rgb(98, 98, 98);
+}
+
+.link {
+    padding: 0 .2rem 0 .2rem;
+}
+
+.link:hover {
+    background-color: rgba(105, 105, 105, 0.465);
+    color: rgb(70, 70, 70);
 }
 
 .header {
@@ -202,6 +214,26 @@ h6 {
 
 .hide {
     display: inherit;
+}
+
+.city {
+    display: flex;
+    cursor: help;
+}
+
+.about-city {
+    position: fixed;
+    background-color: rgb(59, 59, 59);
+    color: rgb(224, 224, 224);
+    font-weight: lighter;
+    bottom: 0;
+    left: 0;
+    padding: .2rem;
+    display: none;
+}
+
+.city:hover .about-city {
+    display: inline;
 }
 
 @media screen and (max-width: 1000px) {
