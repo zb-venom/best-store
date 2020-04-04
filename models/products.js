@@ -1,10 +1,11 @@
-const {Schema, model} = require('mongoose')
+const {Schema, model} = require('mongoose');
 
 const productsSchema = new Schema({    
     productName: String,
-    count: Int32Array, 
-    collection: Int32Array,
+    count: Number, 
+    coll: Number,
+    price: Number,
     imgUrl: String,
-})
+});
 
-module.exports = model('products', productsSchema)
+module.exports = model('products', productsSchema);

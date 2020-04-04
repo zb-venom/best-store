@@ -8,6 +8,6 @@ router.route('/').get(appController.getMain).post(appController.postMain);
 
 router.route('/category/:category').get(appController.getCategory).post(appController.postCategory);
 
-router.route('/admin/panel/:key').get(adminController.getPanel);
+router.route('/admin/panel/:key').get(adminController.getPanel).post(adminController.addProduct);
 
 module.exports = router;

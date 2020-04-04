@@ -1,13 +1,38 @@
 <select size="5" class="admin-select" id="product">
-    <option disabled>Выберите продукт</option>
-    <option value="Чебурашка">Чебурашка</option>
-    <option selected value="Крокодил Гена">Крокодил Гена</option>
-    <option value="Шапокляк">Шапокляк</option>
-    <option value="Крыса Лариса">Крыса Лариса</option>
+    <option disabled>Выберите продукт</option>    
+    <option select value="0">Создать</option>
+    {{#each products}}
+    <option value="{{_id}}">{{productName}}</option>
+    {{/each}}
 </select>
 
+<form method="POST" class="edit-product" action="/admin/panel/50454e4953">
+    <p>imgUrl</p>
+    <input type="text" name="imgUrl" id="imgUrl">
+    <img src="" id="img" height="200px">
+    <p>Product name</p>
+    <input type="text" name="productName" id="name">
+    <p>Collection</p>
+    <select name="coll" id="coll">
+        <option value="1">Зимняя</option>
+        <option value="2">Осенняя</option>
+        <option value="3">Летняя</option>
+        <option value="4">Весенняя</option>
+    </select>
+    <p>Count</p>
+    <input type="number" name="count" min="0" max="10000">
+    <p>Price</p>
+    <input type="number" name="price" min="0" max="100000">
+    <button type="submit">Сохранить</button>
+</form>
+
 <script>
-    $('#product').click(function() {
-        console.log($("#product").val());
+    $('#product').change(() => {
+        if ($("#product").val() == 0) {
+            
+        }
+    })
+    $('#imgUrl').on('keyup input', () => {
+        $('#img').attr("src", $('#imgUrl').val());
     })
 </script>
