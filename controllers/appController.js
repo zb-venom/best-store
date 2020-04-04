@@ -18,10 +18,6 @@ exports.getMain = async (req, res) =>  {
     })
 }
 
-exports.postMain = async (req, res) => {
-    
-}
-
 exports.getCategory = async (req, res) =>  {
     var products = await productsSchema.find().lean();
     var sliderProducts = await productsSchema.find().limit(10).lean();
@@ -46,6 +42,13 @@ exports.getCategory = async (req, res) =>  {
     })
 }
 
+exports.getProduct = async (req, res) => {
+    var product = await productsSchema.find({_id: req.params._id}).lean();
+    res.render('product', {
+        title: 'BestStore | ' + product[0].productName,
+        product
+    })
+}
 
 exports.postCategory = async (req, res) => {
     
