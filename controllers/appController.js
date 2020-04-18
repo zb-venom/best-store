@@ -56,6 +56,12 @@ exports.getProduct = async (req, res) => {
     })
 }
 
+exports.getAuth = async (req, res) =>  {
+    res.render('auth', {
+        title: 'BestStore | Авторизация',
+    })
+}
+
 exports.postCategory = async (req, res) => {
     
 }

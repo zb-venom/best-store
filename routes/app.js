@@ -6,6 +6,8 @@ var adminController = require('../controllers/adminController');
 
 router.route('/').get(appController.getMain);
 
+router.route('/auth').get(appController.getAuth);
+
 router.route('/category/:category').get(appController.getCategory).post(appController.postCategory);
 
 router.route('/admin/panel/:key').get(adminController.getPanel).post(adminController.addProduct);
