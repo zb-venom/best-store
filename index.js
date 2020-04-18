@@ -9,6 +9,8 @@ const config = require('./config/default')
 
 const app = express()
 
+const PORT = process.env.PORT || config.server.port;
+
 const hbs = exphbs.create({
     defaultLayout: 'main',
     extname: 'hbs'
@@ -31,7 +33,7 @@ async function start() {
             useUnifiedTopology: true,
             useFindAndModify: false
         })
-        app.listen(config.server.port, () => {
+        app.listen(PORT, () => {
             console.log('\nСервер запущен...\nПриложение доступно по ссылке http://localhost:5000\n'.green)
         })
     }
