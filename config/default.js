@@ -1,7 +1,7 @@
 var config = {}
 
 config.server = {
-    port: 7777,
+    port: 5000,
 }
 
 config.db = {

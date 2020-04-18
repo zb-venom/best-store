@@ -31,7 +31,7 @@ async function start() {
             useFindAndModify: false
         })
         app.listen(config.server.port, () => {
-            console.log('\nСервер запущен...\nПриложение доступно по ссылке http://localhost:7777\n'.green)
+            console.log('\nСервер запущен...\nПриложение доступно по ссылке http://localhost:5000\n'.green)
         })
     }
     catch (e) {
